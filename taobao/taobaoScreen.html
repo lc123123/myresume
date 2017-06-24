@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+        }
+
+        li,
+        a {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            box-sizing: border-box;
+            color: #3C3C3C;
+            background-color: #f1f1f1;
+            margin-top: 50px;
+        }
+
+        body a {
+            color: #3C3C3C;
+        }
+
+        .clearfix {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-size: 100%;
+        }
+
+        @font-face {
+            font-family: "iconfont";
+            src: url('./icon/iconfont.eot?t=1497776347815');
+            /* IE9*/
+            src: url('./icon/iconfont.eot?t=1497776347815#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('.icon/iconfont.woff?t=1497776347815') format('woff'), /* chrome, firefox */
+            url('./icon/iconfont.ttf?t=1497776347815') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+            url('./icon/iconfont.svg?t=1497776347815#iconfont') format('svg');
+            /* iOS 4.1- */
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 12px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            vertical-align: middle;
+        }
+
+        .screen-outer {
+            width: 1190px;
+            margin: 0 auto;
+            height: 598px;
+            margin-top: 10px;
+        }
+
+        .screen-outer .main {
+            float: left;
+            width: 900px;
+            height: 100%;
+        }
+
+        .tbh-service {
+            float: left;
+            width: 190px;
+            margin-top: -44px;
+        }
+
+        .screen-outer .service {
+            height: 555px;
+            position: relative;
+            background: #FF6537;
+            font-size: 14px;
+            color: #fff;
+            width: 190px;
+        }
+
+        .service-hd {
+            height: 33px;
+            line-height: 33px;
+            text-indent: 10px;
+            position: relative;
+        }
+
+        .service-hd a {
+            color: #fff;
+            display: block;
+            width: 190px;
+        }
+
+        .service-hd h3 {
+            font-weight: bold;
+            line-height: 33px;
+            font-size: 15px;
+        }
+
+        .service-hd span {
+            position: absolute;
+            right: 8px;
+            font-size: 16px;
+            top: 1px;
+            line-height: 33px;
+        }
+
+        .service-bd {
+            height: 482px;
+        }
+
+        .service-bd li {
+            line-height: 30px;
+            height: 30px;
+            padding: 0 10px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .service-bd .service-icons {
+            color: #FF905B;
+            font-size: 16px;
+            width: 18px;
+            vertical-align: super;
+        }
+
+        .service-bd li span:nth-child(2) {
+            display: inline-block;
+            height: 27px;
+            overflow: hidden;
+            width: 134px;
+            vertical-align: top;
+        }
+
+        .service-bd a {
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .service-bd li .icon-right {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .service-bd a:hover {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        /* .service-float{
+            position: absolute;
+            left: 188px;
+            top: 33px;
+            padding: 0 0 0 18px;
+            width: 692px;
+            height: 518px;
+            border: 2px solid #F94A14;
+            box-shadow: 2px 2px 0 #dcdadb;
+            background: #fff;
+            color: #333;
+            font-size: 12px;
+        }
+        */
+
+        .service-float-item {
+            position: absolute;
+            left: 188px;
+            top: 33px;
+            padding: 0 0 0 18px;
+            width: 692px;
+            height: 518px;
+            border: 2px solid #F94A14;
+            box-shadow: 2px 2px 0 #dcdadb;
+            background: #fff;
+            color: #333;
+            font-size: 12px;
+        }
+
+        .service-float-main {
+            padding-top: 25px;
+            padding-right: 10px;
+            width: 427px;
+            height: 475px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .service-float .service-panel {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .service h5 {
+            height: 28px;
+            position: relative;
+            border-bottom: 1px solid #e0e0e0;
+            line-height: 28px;
+        }
+
+        .service h5 img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .service h5 .words {
+            font-size: 14px;
+            position: relative;
+            left: 4px;
+            bottom: 6px;
+            color: #3C3C3C;
+            font-weight: 700;
+        }
+
+        .service h5 .words:hover {
+            color: #F40;
+        }
+
+        .service h5 .more {
+            font-size: 12px;
+            right: -6px;
+            position: absolute;
+            font-weight: 400;
+            top: 10px;
+        }
+
+        .service h5 .more:hover {
+            color: #F40;
+        }
+
+        .service h5 span i {
+            position: relative;
+            left: -4px;
+            font-size: 10px;
+            color: #3C3C3C;
+        }
+
+        .service-panel p {
+            height: 94px;
+            overflow: hidden;
+            padding: 8px 0;
+            line-height: 24px;
+            margin-bottom: 22px;
+        }
+
+        .service-panel p a {
+            display: inline-block;
+            margin-right: 12px;
+            white-space: nowrap;
+        }
+
+        .h {
+            color: #F40!important;
+        }
+
+        .service-float .lovely {
+            float: left;
+            width: 240px;
+            height: 479px;
+            padding: 7px 0;
+            padding-left: 15px;
+            padding-top: 32px;
+            position: relative;
+            background: #f4f4f4;
+        }
+
+        .lovely h3 {
+            position: absolute;
+            top: 17px;
+            left: 50%;
+            width: 114px;
+            line-height: 20px;
+            height: 20px;
+            font-size: 14px;
+            text-align: center;
+            margin-left: -57px;
+            font-style: normal;
+            color: #3c3c3c;
+        }
+
+        .lovely h3 .heart {
+            color: #dd4410;
+            font-size: 18px;
+            margin-right: 6px;
+            vertical-align: top;
+        }
+
+        .lovely .subtitle {
+            margin-top: 4px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+
+        .lovely .service-lovely-main {
+            margin-top: 18px;
+            min-height: 380px;
+        }
+
+        .service-lovely-main a {
+            display: inline-block;
+            width: 110px;
+            height: 110px;
+            background-color: #F5F5F5;
+            position: relative;
+            margin-right: 8px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .service-lovely-main a img {
+            width: 110px;
+            min-height: 110px;
+        }
+
+        .service-lovely-main a span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 4px;
+            overflow: hidden;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .8);
+            color: #666;
+        }
+
+        .service-float-item {
+            display: none;
+        }
+
+        .service-float .active {
+            display: block;
+            transition: all 0.3s;
+        }
+        .screen-content{
+            float: left;
+            width: 520px;
+        }
+        .promo-bd {
+            margin: 0 auto;
+            position: relative;
+            width: 520px;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .promo-ct li {
+            float: left;
+        }
+
+        .promo-ct {
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .promo-ct img {
+            float: left;
+            width: 520px;
+            height: 280px;
+        }
+
+        .btn {
+            display: block;
+            width: 24px;
+            height: 36px;
+            position: absolute;
+            color: #fff;
+            background: #000;
+            opacity: 0.3;
+            text-align: center;
+            line-height: 36px;
+            font-size: 20px;
+            bottom: 50%;
+            margin-bottom: -28px;
+            display: none;
+        }
+
+        .promo-bd:hover .btn {
+            display: block;
+        }
+        .tmall-bd:hover .btn {
+            display: block;
+        }
+        .btn:hover {
+            opacity: 0.7;
+        }
+
+        .btn-pre {
+            left: 10px;
+        }
+
+        .btn-next {
+            right: 10px;
+        }
+
+        .indicator {
+            position: absolute;
+            left: 50%;
+            bottom: 15px;
+            margin-left: -39px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, .3);
+            height: 13px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .indicator li {
+            width: 9px;
+            height: 0;
+            display: block;
+            float: left;
+            background: #B7B7B7;
+            border-radius: 50%;
+            padding-top: 9px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .indicator li:last-child {
+            margin-right: 0;
+        }
+
+        .indicator .active {
+            background: red;
+        }
+        .main .promo-case{
+            margin-left: 10px;
+            float: left;
+            width: 520px;
+        }
+        .tmall-case {
+            width: 520px;
+            float: left;
+            margin-left: 10px;
+        }
+        .tmall{
+            position: relative;
+            width: 520px;
+            height: 230px;
+            margin-top: 1px;
+            overflow: hidden;
+        }
+        .tmall-hd{
+            font-size: 14px;
+            height: 26px;
+            border-bottom: 2px solid #c12c26;
+            position: relatice;
+            background: #f1f1f1;
+            overflow: hidden;
+        }
+        .tmall-hd img{
+            margin-bottom: -4px;
+        }
+        .tmall-hd h2{
+            display: inline;
+            border-bottom: 2px solid #000;
+            width: 58px;
+            line-height: 32px;
+            font-weight: 700;
+            position: relative;
+            bottom: -2px;
+        }
+        .tmall-hd em{
+            font-size: 12px;
+            color: #666;
+            margin-left: 6px;
+            position: relative;
+            bottom: -1px;
+        }
+        .tmall-bd{
+            height: 201px;
+            position: relative;
+            background: #fff;
+        }
+        .tmall-bd .tmall-ct li{
+            float: left;
+            width: 520px;
+            position: relative;
+        }
+        .tmall-ct{
+            position: absolute;
+        }
+        .tmall-ct .mod1 img{
+            margin-top: 6px;
+            margin-left: 6px;
+            width: 251px;
+            height: 190px;
+        }
+        .tmall-ct .mod2{
+            margin-top: 22px;
+            margin-left: 7px;
+            float: left;
+        }
+        .tmall-ct .mod2 img{
+            width: 250px;
+            height: 155px;
+        }
+        .tmall-ct .mod3 img{
+            width: 129px;
+            height: 201px;
+            border-left: 1px solid #fff;
+        }
+        .tmall-ct .mod3 img:first-child{
+            width: 130px;
+            border-left: 0;
+        }
+        .sub-column{
+            float: right;
+            width: 160px;
+            margin-right: 10px;
+        }
+        .sub-column .top-img{
+            height: 280px;
+        }
+        .sub-column .bottom-img{
+            margin-top: 1px;
+            height: 230px;
+        }
+        .sub-column .bottom-img h5{
+            font-size: 12px;
+            font-weight: 400;
+            background: #f1f1f1;
+            color: #a1a1a1;
+            line-height: 24px;
+            padding-top: 6px;
+        }
+        .screen-outer .main-ft{
+            background: transparent;
+            width: 890px;
+            overflow: hidden;
+        }
+        .main-ft .belt{
+            margin-top: 10px;
+            height: 76px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .belt a{
+            float: left;
+            position: relative;
+            width: 179px;
+            height: 74px;
+        }
+        .belt a img{
+            height: 60px;
+            width: 60px;
+            margin-top: 8px;
+            margin-right: 8px;
+            margin-left: 10px;
+            border: 1px solid #ededed;
+            border-radius: 100%;
+            float: left;
+        }
+        .belt a strong{
+            height: 24px;
+            margin-top: 6px;
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .belt a span{
+            display: block;
+            height: 16px;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .belt a p{
+            display: inline-block;
+            margin-top: 1px;
+            color: #999;
+        }
+        .belt a em .iconfont{
+            font-size: 16px;
+            margin-right: 2px;
+            display: inline-block;
+            font-style: normal;
+            color: #999;
+        }
+        .belt-item-1{
+            color: #9a745f;
+        }
+        .belt-item-1:hover img{
+            border-color: #9a745f;
+            opacity: .8;
+            transition: all .3s;
+        }
+        .belt-item-2{
+            color: #81c18f;
+        }
+        .belt-item-2:hover img{
+            border-color: #81c18f;
+            opacity: .8;
+            transition: all .3s;
+        }
+        .belt-item-3{
+            color: #72a5f6;
+        }
+        .belt-item-3:hover img{
+            border-color: #72a5f6;
+            opacity: .8;
+            transition: all .3s;
+        }
+        .belt-item-4{
+            color: #846fc7;
+        }
+        .belt-item-4:hover img{
+            border-color: #846fc7;
+            opacity: .8;
+            transition: all .3s;
+        }
+        .belt-item-5{
+            color: #de525e;
+            width: 172px!important;
+        }
+        .belt-item-5:hover img{
+            border-color: #de525e;
+            opacity: .8;
+            transition: all .3s;
+        }
+        .col-right{
+            float: right;
+            width: 290px;
+            height: 100%;
+            position: relative;
+        }
+        .right-member{
+            background-image: url('file:///D:/qianduanxuexi/JS/简历/taobaoimg/right.png');
+            background-color: #f1f1f1;
+            background-size: 290px 168px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+        .member{
+            padding: 15px;
+            padding-top: 3px;
+            width: 268px;
+            height: 149px;
+            text-align: center;
+            padding-right: inherit;
+            border-bottom: 1px solid #EEE;
+            background-repeat: no-repeat;
+        } 
+        .member-bd{
+            position: relative;
+            height: 117px;
+        }
+        .member-bd .portrait-ct{
+            display: block;
+            margin: 0 auto;
+            width: 74px;
+            height: 62px;
+            padding-top: 10px;
+        }  
+        .member-bd .home{
+            display: inline-block;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            background-clip: padding-box;
+            width: 56px;
+            height: 56px;
+            line-height: 56px;
+            overflow: hidden;
+        }
+        .member-bd a img{
+            width: 56px;
+            height: 56px;
+            top: -3px;
+        }
+        .nick-info{
+            margin-top: 2px;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .nick-info strong{
+            font-weight: 400;
+        }
+        .member-tjb a,.member-tjb span{
+            height: 20px;
+            line-height: 20px;
+        }
+        .member-tjb .iconfont{
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            vertical-align: middle;
+            margin-top: -2px;
+            background-position: 0 -882px
+        }
+        .member-ft{
+            height: 40px;
+            overflow: hidden;
+        }
+        .member-logout{
+            height: 25px;
+        }
+        .member-logout a{
+            float: left;
+            width: 75px;
+            line-height: 25px;
+            margin-right: 7px;
+            text-align: center;
+            color: #fff;
+            border-radius: 1px;
+            background: #F40;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .member-logout a:first-child {
+            width: 92px;
+        }
+        .tab-notice{
+            height: 98px;
+            margin-top: 1px;
+            padding-top: 7px;
+            padding-bottom: 4px;
+            width: 290px;
+            background: #fff;
+        }
+        .tab-notice .notice-hd{
+            position: relative;
+            height: 24px;
+            margin-bottom: 20px;
+            margin-top: 4px;
+            overflow: hidden;
+            margin-right: -2px;
+            padding: 0 8px;
+        }
+        .tab-notice .notice-hd li {
+            float: left;
+            line-height: 22px;
+            width: 39px;
+            text-align: center;
+            margin: 0 8px;
+        }
+        .tab-notice .notice-hd .active{
+            padding: 0;
+            font-weight: 700;
+            border-bottom: 2px solid #F40;
+        }
+        .notice-bd ul{
+            margin: 10px;
+            height: 50px;
+            overflow: hidden;
+            margin-top: -10px;
+            display: none;
+        }
+        .notice-bd ul li {
+            float: left;
+            line-height: 25px;
+            height: 25px;
+            width: 130px;
+            overflow: hidden;
+        }
+        .notice-bd ul li a:hover{
+            color: #f40;
+        }
+        .notice-bd .active li:first-child{
+            width: 260px;
+        }
+        .notice-bd .active{
+            display: block;
+        }
+        .tab-conve{
+            background: #fff;
+        }
+        .conve{
+            position: relative;
+            border-top: 1px solid #eaeaea;
+            height: 200px;
+        }
+        .conve-list{
+            width: 294px;
+        }
+        .conve-list li{
+            float: left;
+            width: 71px;
+            height: 67px;
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+            border-left-color: transparent;
+            border-top-color: transparent;
+        }
+        .conve-list .conve-float{
+            overflow: visible;
+            border-top-color: #eaeaea; 
+        }
+        .conve-list li.min{
+            width: 70px;
+        }
+        .conve a{
+            padding-top: 1px;
+            text-align: center;
+            display: block;
+        }
+        .conve-list a .conve-icon{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-top: 11px;
+            background-repeat: no-repeat;
+        }
+        .conve-icon{
+            background: url(file:///D:/qianduanxuexi/JS/简历/taobaoimg/sprit.png) 0 0 no-repeat;
+        }
+        .conve-item-1 .conve-icon{
+            background-position: 0 0;
+        }
+        .conve-item-2 .conve-icon{
+            background-position: 0 -44px;
+        }
+        .conve-item-4 .conve-icon{
+            background-position: 0 -132px;
+        }
+        .conve-item-5 .conve-icon{
+            background-position: 0 -39px;
+        }
+        .conve-item-6 .conve-icon{
+            background-position: 0 -220px;
+        }
+        .conve-item-7 .conve-icon{
+            background-position: 0 -1052px;
+        }
+        .conve-item-8 .conve-icon{
+            background-position: 0 -308px;
+        }
+        .conve-item-9 .conve-icon{
+            background-position: 0 -352px;
+        }
+        .conve-item-10 .conve-icon{
+            background-position: 0 -396px;
+        }
+        .conve-item-11 .conve-icon{
+            background-position: 0 -440px;
+        }
+        .conve-item-12 .conve-icon{
+            background-position: 0 -1146px;
+        }
+        .conve-list .selected{
+            position: relative;
+            border-color: #F40;
+            z-index: 11;
+            transition: border-color .1s;
+            border-bottom-color: #fff;
+        }
+        .conve-list li.selected a{
+            position: relative;
+            z-index: 11;
+            background: #fff;
+            height: 69px;
+            color: #f40;
+        }
+        .conve-bd-box{
+            position: absolute;
+            z-index: -1;
+            top: 300px;
+            left: 0;
+            width: 288px;
+            height: 150px;
+            background: #fff;
+            border: 1px solid #EAEAEA;
+            outline: 0;
+            display: none;
+        }
+        .conve-bd-box.selected{
+            top: 68px;
+            display: block;
+            border-color: #f40;
+            transition: border-color .1s;
+            overflow: hidden;
+            z-index: 8;
+        }
+        .conve-bd-box-close {
+            display: block;
+            z-index: 5;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            color: #999;
+            background-color: #fff;
+        }
+        .conve-bd-item {
+            position: relative;
+            padding-top: 4px;
+            z-index: 2;
+            display: none;
+        }
+        .module-ct{
+            padding: 0 15px;
+            width: 278px;
+            height: 155px;
+            overflow: hidden;
+        }
+        .module-hd{
+            position: relative;
+            height: 26px;
+            line-height: 26px;
+        }
+        .module-hd a{
+            float: left;
+            padding: 3px 10px;
+            color: #666;
+        }
+        .module-hd a.selected{
+            color: #ff4300;
+        }
+        .tab-phone{
+            padding-top: 4px;
+        }
+        .tab-phone select{
+            display: block;
+            width: 165px;
+            padding: 4px 20px 4px 3px;
+        }
+        .tab-phone input{
+            display: block;
+            width: 157px;
+            padding: 2px
+        }
+        .tab-phone span{
+            padding-top: 3px;
+        }
+        .buy{
+            display: inline-block;
+            margin: 0 10px 0 0;
+            padding: 3px 10px;
+            height: 21px;
+            margin-top: 5px;
+            line-height: 21px;
+            font-weight: 700;
+            color: #fff;
+            border: none;
+            background: #f40;
+            vertical-align: top;
+        }
+        .rmb{
+            color: #999;
+            margin-right: 4px;
+            font-family: arial;
+        }
+        .number{
+            color: #f60;
+            font-weight: 700;
+            font-family: verdana,arial;
+        }
+        .conve-bd-item.selected{
+            display: block;
+        }
+        .tab-in{
+            display: none;
+        }
+        .tab-in.selected{
+            display: block;
+        }
+        .ali-app{
+            margin-top: 2px;
+            position: relative;
+            background: #fff;
+        }
+        .apps{
+            margin-top: 0;
+            position: relative;
+            padding: 6px 0 0 13px;
+            height: 110px;
+        }
+        .apps h3{
+            padding-right: 13px;
+            font-size: 14px;
+            height: 20px;
+            position: relative;
+            font-weight: 700;
+        }
+        .apps .more{
+            position: absolute;
+            right: 10px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .apps .more span{
+            position: relative;
+            left: -4px;
+            font-size: 10px;
+        }
+        .apps-ct{
+            padding-top: 6px;
+            position: relative;
+            height: 84px;
+        }
+        .apps-ct li{
+            transition: all 0s;
+            position: relative;
+            float: left;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #FFF;
+            margin-right: 21px;
+            margin-bottom: 8px;
+        }
+        .apps-ct li a img{
+            width: 32px;
+            height: 32px;
+        }
+        .apps-ct .app-qr{
+            touch-action: none;
+            bottom: 39px;
+            left: -32px;
+            width: 90px;
+            height: 102px;
+            background: #FFF;
+            border: 1px solid #dedede;
+            text-align: center;
+            display: none;
+            position: absolute;
+            z-index: 1;
+        }
+        .apps-ct .app-qr img{
+            width: 66px;
+            height: 66px;
+            padding: 12px;
+        }
+        .apps-ct .app-qr p{
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            line-height: 20px;
+            color: #666;
+            overflow: hidden;
+            display: block;
+        }
+        .apps-ct .app-qr.hover{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen-outer clearfix">
+        <div class="main">
+            <div class="tbh-service">
+                <div class="service">
+                    <div class="service-hd">
+                        <a href="#">
+                            <h3>主题市场</h3>
+                            <span class="iconfont">&#xe605;</span>
+                        </a>
+                    </div>
+                    <ul class="service-bd">
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe6a3;</span>
+                            <span>
+                                <a href="#">女装</a> /
+                                <a href="#">男装</a> /
+                                <a href="#">内衣</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe69d;</span>
+                            <span>
+                                <a href="#">鞋靴</a> /
+                                <a href="#">箱包</a> /
+                                <a href="#">配件</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe619;</span>
+                            <span>
+                                <a href="#">童装玩具</a> /
+                                <a href="#">孕产</a> /
+                                <a href="#">用品</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe63c;</span>
+                            <span>
+                                <a href="#">家电</a> /
+                                <a href="#">数码</a> /
+                                <a href="#">手机</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe618;</span>
+                            <span>
+                                <a href="#">美妆</a> /
+                                <a href="#">洗护</a> /
+                                <a href="#">保健品</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe6b1;</span>
+                            <span>
+                                <a href="#">珠宝</a> /
+                                <a href="#">眼镜</a> /
+                                <a href="#">手表</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe668;</span>
+                            <span>
+                                <a href="#">运动</a> /
+                                <a href="#">户外</a> /
+                                <a href="#">乐器</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe617;</span>
+                            <span>
+                                <a href="#">游戏</a> /
+                                <a href="#">动漫</a> /
+                                <a href="#">影视</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe606;</span>
+                            <span>
+                                <a href="#">美食</a> /
+                                <a href="#">生鲜</a> /
+                                <a href="#">零食</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe69f;</span>
+                            <span>
+                                <a href="#">鲜花</a> /
+                                <a href="#">宠物</a> /
+                                <a href="#">农资</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe607;</span>
+                            <span>
+                                <a href="#">房产</a> /
+                                <a href="#">装修</a> /
+                                <a href="#">建材</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe695;</span>
+                            <span>
+                                <a href="#">家具</a> /
+                                <a href="#">家饰</a> /
+                                <a href="#">家纺</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe6ab;</span>
+                            <span>
+                                <a href="#">汽车</a> /
+                                <a href="#">二手车</a> /
+                                <a href="#">用品</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe611;</span>
+                            <span>
+                                <a href="#">办公</a> /
+                                <a href="#">DIY</a> /
+                                <a href="#">五金电子</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe62c;</span>
+                            <span>
+                                <a href="#">百货</a> /
+                                <a href="#">餐厨</a> /
+                                <a href="#">家庭保健</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+
+                        <li calss="service-bd-li">
+                            <span class="iconfont service-icons">&#xe646;</span>
+                            <span>
+                                <a href="#">学习</a> /
+                                <a href="#">卡卷</a> /
+                                <a href="#">本地服务</a>
+                            </span>
+                            <span class="icon-right">〉</span>
+                        </li>
+                    </ul>
+                    <div class="service-ft">
+                        <a href="#">
+                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\service.webp" alt="">
+                        </a>
+                    </div>
+                    <div class="service-float">
+                        <div class="service-float-item clearfix">
+                            <div class="service-float-main">
+                                <div class="service-panel">
+                                    <h5>
+                                        <a href="#">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\girl.jpg" alt="">
+                                            <span class="words">女装</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="more">
+                                                更多
+                                                <i>〉</i>
+                                            </span>
+                                        </a>
+                                    </h5>
+                                    <p>
+                                        <a href="#" class="h">初夏新品</a>
+                                        <a href="#" class="h">连衣裙</a>
+                                        <a href="#" class="h">T恤</a>
+                                        <a href="#">裤子</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#" class="h">牛仔裤</a>
+                                        <a href="#">薄针织衫</a>
+                                        <a href="#" class="h">夏外套</a>
+                                        <a href="#">牛仔外套</a>
+                                        <a href="#" class="h">套装</a>
+                                        <a href="#">卫衣</a>
+                                        <a href="#" class="h">棒球衫</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#" class="h">半身裙</a>
+                                        <a href="#">蕾丝衫</a>
+                                        <a href="#" class="h">大码女装</a>
+                                        <a href="#">西装</a>
+                                        <a href="#" class="h">情侣T</a>
+                                        <a href="#">皮衣</a>
+                                        <a href="#" class="h">雪纺衫</a>
+                                        <a href="#">妈妈装</a>
+                                        <a href="#" class="h">红人私服</a>
+                                        <a href="#">甜美风</a>
+                                        <a href="#">文艺风</a>
+                                        <a href="#" class="h">街头风</a>
+                                        <a href="#">原创单品</a>
+                                        <a href="#" class="h">大厂直供</a>
+                                        <a href="#" class="h">潮流志</a>
+                                        <a href="#">淘品牌</a>
+                                        <a href="#">高腰裤</a>
+                                        <a href="#">上班族</a>
+                                        <a href="#">腔调</a>
+                                        <a href="#">小西装</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">毛呢外套</a>
+                                        <a href="#">棉衣/棉服</a>
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">皮草</a>
+                                    </p>
+                                </div>
+                                <div class="service-panel">
+                                    <h5>
+                                        <a href="#">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\girl.jpg" alt="">
+                                            <span class="words">女装</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="more">
+                                                更多
+                                                <i>〉</i>
+                                            </span>
+                                        </a>
+                                    </h5>
+                                    <p>
+                                        <a href="#" class="h">初夏新品</a>
+                                        <a href="#" class="h">连衣裙</a>
+                                        <a href="#" class="h">T恤</a>
+                                        <a href="#">裤子</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#" class="h">牛仔裤</a>
+                                        <a href="#">薄针织衫</a>
+                                        <a href="#" class="h">夏外套</a>
+                                        <a href="#">牛仔外套</a>
+                                        <a href="#" class="h">套装</a>
+                                        <a href="#">卫衣</a>
+                                        <a href="#" class="h">棒球衫</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#" class="h">半身裙</a>
+                                        <a href="#">蕾丝衫</a>
+                                        <a href="#" class="h">大码女装</a>
+                                        <a href="#">西装</a>
+                                        <a href="#" class="h">情侣T</a>
+                                        <a href="#">皮衣</a>
+                                        <a href="#" class="h">雪纺衫</a>
+                                        <a href="#">妈妈装</a>
+                                        <a href="#" class="h">红人私服</a>
+                                        <a href="#">甜美风</a>
+                                        <a href="#">文艺风</a>
+                                        <a href="#" class="h">街头风</a>
+                                        <a href="#">原创单品</a>
+                                        <a href="#" class="h">大厂直供</a>
+                                        <a href="#" class="h">潮流志</a>
+                                        <a href="#">淘品牌</a>
+                                        <a href="#">高腰裤</a>
+                                        <a href="#">上班族</a>
+                                        <a href="#">腔调</a>
+                                        <a href="#">小西装</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">毛呢外套</a>
+                                        <a href="#">棉衣/棉服</a>
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">皮草</a>
+                                    </p>
+                                </div>
+                                <div class="service-panel">
+                                    <h5>
+                                        <a href="#">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\girl.jpg" alt="">
+                                            <span class="words">女装</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="more">
+                                                更多
+                                                <i>〉</i>
+                                            </span>
+                                        </a>
+                                    </h5>
+                                    <p>
+                                        <a href="#" class="h">初夏新品</a>
+                                        <a href="#" class="h">连衣裙</a>
+                                        <a href="#" class="h">T恤</a>
+                                        <a href="#">裤子</a>
+                                        <a href="#">衬衫</a>
+                                        <a href="#" class="h">牛仔裤</a>
+                                        <a href="#">薄针织衫</a>
+                                        <a href="#" class="h">夏外套</a>
+                                        <a href="#">牛仔外套</a>
+                                        <a href="#" class="h">套装</a>
+                                        <a href="#">卫衣</a>
+                                        <a href="#" class="h">棒球衫</a>
+                                        <a href="#">风衣</a>
+                                        <a href="#" class="h">半身裙</a>
+                                        <a href="#">蕾丝衫</a>
+                                        <a href="#" class="h">大码女装</a>
+                                        <a href="#">西装</a>
+                                        <a href="#" class="h">情侣T</a>
+                                        <a href="#">皮衣</a>
+                                        <a href="#" class="h">雪纺衫</a>
+                                        <a href="#">妈妈装</a>
+                                        <a href="#" class="h">红人私服</a>
+                                        <a href="#">甜美风</a>
+                                        <a href="#">文艺风</a>
+                                        <a href="#" class="h">街头风</a>
+                                        <a href="#">原创单品</a>
+                                        <a href="#" class="h">大厂直供</a>
+                                        <a href="#" class="h">潮流志</a>
+                                        <a href="#">淘品牌</a>
+                                        <a href="#">高腰裤</a>
+                                        <a href="#">上班族</a>
+                                        <a href="#">腔调</a>
+                                        <a href="#">小西装</a>
+                                        <a href="#">毛衣</a>
+                                        <a href="#">毛呢外套</a>
+                                        <a href="#">棉衣/棉服</a>
+                                        <a href="#">羽绒服</a>
+                                        <a href="#">皮草</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lovely">
+                                <h3>
+                                    <span class="iconfont heart">&#xe6b1;</span> 猜你喜欢
+                                </h3>
+                                <div class="subtitle">实时推荐最适合你的宝贝</div>
+                                <div class="service-lovely-main">
+                                    <a href="#">
+                                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\裤子.webp" alt="">
+                                        <span>天天特价胖子七分短裤</span>
+                                    </a>
+                                    <a href="#">
+                                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\裤子.webp" alt="">
+                                        <span>天天特价胖子七分短裤</span>
+                                    </a><a href="#">
+                                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\裤子.webp" alt="">
+                                        <span>天天特价胖子七分短裤</span>
+                                    </a><a href="#">
+                                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\裤子.webp" alt="">
+                                        <span>天天特价胖子七分短裤</span>
+                                    </a><a href="#">
+                                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\裤子.webp" alt="">
+                                        <span>天天特价胖子七分短裤</span>
+                                    </a><a href="#">
+                                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\裤子.webp" alt="">
+                                        <span>天天特价胖子七分短裤</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-float-item clearfix">内容2</div>
+                        <div class="service-float-item clearfix">内容3</div>
+                        <div class="service-float-item clearfix">内容4</div>
+                        <div class="service-float-item clearfix">内容5</div>
+                        <div class="service-float-item clearfix">内容6</div>
+                        <div class="service-float-item clearfix">内容7</div>
+                        <div class="service-float-item clearfix">内容8</div>
+                        <div class="service-float-item clearfix">内容9</div>
+                        <div class="service-float-item clearfix">内容10</div>
+                        <div class="service-float-item clearfix">内容11</div>
+                        <div class="service-float-item clearfix">内容12</div>
+                        <div class="service-float-item clearfix">内容13</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-content">
+                <div class="promo-case">
+                    <div class="promo">
+                        <div class="promo-bd">
+                                <ul class="promo-ct clearfix">
+                                    <li data-index="0">
+                                        <a href="#"><img src="D:\qianduanxuexi\JS\简历\taobaoimg\promo1.webp"
+                        alt=""></a>
+                                    </li>
+                                    <li data-index="1">
+                                        <a href="#"><img src="D:\qianduanxuexi\JS\简历\taobaoimg\promo2.webp" alt=""></a>
+                                    </li>
+                                    <li data-index="2">
+                                        <a href="#"><img src="D:\qianduanxuexi\JS\简历\taobaoimg\promo3.png" alt=""></a>
+                                    </li>
+                                    <li data-index="3">
+                                        <a href="#"><img src="D:\qianduanxuexi\JS\简历\taobaoimg\promo4.jpg" alt=""></a>
+                                    </li>
+                                    <li data-index="4">
+                                        <a href="#"><img src="D:\qianduanxuexi\JS\简历\taobaoimg\promo5.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                                <a class="btn btn-pre" href="javascript:void(0)">
+                                    <</a>
+                                        <a class="btn btn-next" href="javascript:void(0)">></a>
+                                        <ul class="indicator">
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                            </div>
+                        </div>
+                    </div>
+                <div class="tmall-case">
+                    <div class="tmall">
+                        <div class="tmall-hd">
+                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\cat.gif" alt="">
+                            <h2>天猫必逛</h2>
+                            <em>热门品牌，天天上天猫</em>
+                        </div>
+                        <div class="tmall-bd">
+                            <ul class="tmall-ct clearfix">
+                                    <li data-index="0">
+                                        <a href="#" class="mod1">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tmall1-1.jpg" alt="">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tmall1-2.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li data-index="1">
+                                        <a href="#" class="mod2">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tmall2-1.jpg" alt="">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tmall2-2.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li data-index="2" class="mod3">
+                                        <a href="#">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tmall3-1.jpg" alt="">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tmall3-2.jpg" alt="">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tamll3-3.jpg" alt="">
+                                            <img src="D:\qianduanxuexi\JS\简历\taobaoimg\tamll3-4.jpg" alt="">
+                                        </a>
+                                    </li>
+                            </ul>
+                            <a class="btn btn-pre" href="javascript:void(0)"><</a>
+                            <a class="btn btn-next" href="javascript:void(0)">></a>
+                            <ul class="indicator">
+                                <li class="active"></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-column">
+                <div class="top-img">
+                    <img src="D:\qianduanxuexi\JS\简历\taobaoimg\hot1.webp" alt="">
+                </div>
+                <div class="bottom-img">
+                    <h5>今日热卖</h5>
+                    <img src="D:\qianduanxuexi\JS\简历\taobaoimg\hot2.png" alt="">
+                </div>
+            </div>
+            <div class="main-ft">
+                <div class="belt clearfix">
+                    <a class="belt-item-1 clearfix" href="#">
+                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\belt_1.webp" alt="">
+                        <strong>爱车一族</strong>
+                        <span>定义车生活</span>
+                        <em>
+                            <span class="iconfont">&#xe69f;</span>
+                            <p>人气5865303</p>
+                        </em>
+                    </a>
+                    <a class="belt-item-2" href="#">
+                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\belt_2.webp" alt="">
+                        <strong>囤货小当家</strong>
+                        <span>会囤会生活</span>
+                        <em>
+                            <span class="iconfont">&#xe69f;</span>
+                            <p>人气4948456</p>
+                        </em>
+                    </a>
+                    <a class="belt-item-3" href="#">
+                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\belt_3.webp" alt="">
+                        <strong>多肉控</strong>
+                        <span>植物界小鲜肉</span>
+                        <em>
+                            <span class="iconfont">&#xe69f;</span>
+                            <p>人气129064</p>
+                        </em>
+                    </a>
+                    <a class="belt-item-4" href="#">
+                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\belt_4.webp" alt="">
+                        <strong>养生达人</strong>
+                        <span>打开长寿按钮</span>
+                        <em>
+                            <span class="iconfont">&#xe69f;</span>
+                            <p>人气996585</p>
+                        </em>
+                    </a>
+                    <a class="belt-item-5" href="#">
+                        <img src="D:\qianduanxuexi\JS\简历\taobaoimg\belt_5.webp" alt="">
+                        <strong>吃货的后裔</strong>
+                        <span>翻滚吧美食君</span>
+                        <em>
+                            <span class="iconfont">&#xe69f;</span>
+                            <p>人气4363408</p>
+                        </em>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="right-member">
+                <div class="member">
+                    <div class="member-bd">
+                        <div class="portrait-ct">
+                            <div class="protrait">
+                                <a class="home" href="#">
+                                    <img src="D:\qianduanxuexi\JS\简历\taobaoimg\portrait.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <span class="nick-info">Hi!
+                            <strong>你好</strong>
+                        </span>
+                        <p class="member-tjb">
+                            <a href="#" class="h">
+                                <span class="iconfont">&#xe6b1;</span>
+                                领淘金币抵钱
+                            </a>
+                            <span>或去</span>
+                            <a href="#" class="h">会员俱乐部</a>
+                        </p>
+                        <div class="member-ft">
+                            <div class="member-logout clearfix">
+                                <a href="#">登录</a>
+                                <a href="#">注册</a>
+                                <a href="#">开店</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-notice">
+                <ul class="notice-hd">
+                    <li class="active">公告</li>
+                    <li>规则</li>
+                    <li>论坛</li>
+                    <li>安全</li>
+                    <li>公益</li>
+                </ul>
+                <div class="notice-bd">
+                    <ul class="active">
+                        <li>
+                            <a href="#" class="h">马云：请美国中小企业“重新发现中国”</a>
+                        </li>
+                        <li>
+                            <a href="#">为eWTP再飞1000小时</a>
+                        </li>
+                        <li>
+                            <a href="#">柳传志千字点赞马云</a>
+                        </li>
+                    </ul>
+                    <ul>内容2</ul>
+                    <ul>内容3</ul>
+                    <ul>内容4</ul>
+                    <ul>内容5</ul>
+                </div>
+            </div>
+            <div class="tab-conve">
+                <div class="conve clearfix">
+                    <ul class="conve-list">
+                        <li class="mod conve-float conve-item-1 min">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>充话费</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-float conve-item-2">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>游戏</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-float conve-item-3">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>旅行</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-float conve-item-4 min">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>车险</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-5 min">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>彩票</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-6">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>电影</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-7">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>酒店</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-8 min">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>理财</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-9 min">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>找服务</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-10">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>音乐</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-11">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>水电煤</p>
+                            </a>
+                        </li>
+                        <li class="mod conve-item-12 min">
+                            <a href="#">
+                                <span class="conve-icon"></span>
+                                <p>火车票</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="conve-bd-box">
+                        <a href="#" class="conve-bd-box-close">×</a>
+                        <div class="conve-bd-item">
+                            <div class="module-wrap">
+                                <div class="module-ct">
+                                    <div class="module-hd">
+                                        <a href="#">充话费</a>
+                                        <a href="#">充流量</a>
+                                        <a href="#">充固话</a>
+                                        <a href="#">充宽带</a>
+                                    </div>
+                                    <div class="tab-phone tab-in selected">
+                                        <input type="text" placeholder="请输入手机号码">
+                                        <select name="" id="">
+                                            <option value="">50元</option>
+                                            <option value="">100元</option>
+                                            <option value="">150元</option>
+                                            <option value="">200元</option>
+                                        </select>
+                                        <span class="sale">售价</span>
+                                        <span class="rmb">¥</span>
+                                        <span class="number">49-49.8</span>
+                                        <a href="#" class="buy">立即充值</a>
+                                    </div>
+                                    <div class="tab-liuliang tab-in">内容2</div>
+                                    <div class="tab-guhua tab-in">内容3</div>
+                                    <div class="tab-kuandai tab-in">内容4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conve-bd-item game-wrap">内容2</div>
+                        <div class="conve-bd-item travel-wrap">内容3</div>
+                        <div class="conve-bd-item car-wrap">内容4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ali-app">
+                <div class="apps">
+                    <h3>阿里APP
+                    <a class="more" href="#">更多
+                        <span class="right-arrow">〉</span>
+                    </a>
+                    </h3>
+                    <ul class="apps-ct clearfix">
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_1.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫淘宝</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_2.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫天猫</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_3.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫聚划算</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_4.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫支付宝</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_5.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫旺旺</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_6.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫飞猪旅行</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_7.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫钱盾</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_8.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫闲鱼</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_9.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫土豆</p>
+                            </div>
+                        </li>
+                        <li class="nav">
+                            <a href="#">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_10.webp" alt="">
+                            </a>
+                            <div class="app-qr">
+                                <img src="D:\qianduanxuexi\JS\简历\taobaoimg\aliapp_qr.jpg" alt="">
+                                <p>扫一扫钉钉</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+        <script>
+            
+            var $ct = $('.promo-ct'),
+            $preBtn = $('.btn-pre'),
+            $nextBtn = $('.btn-next'),
+            $indicator = $('.indicator');
+
+        var $lastImg = $ct.find('li').last(),
+            $firstImg = $ct.find('li').first();
+
+        var curPage = 0;
+        var imgLength = $ct.children().length;
+        var isAnimate = false;
+
+        $ct.prepend($lastImg.clone());
+        $ct.append($firstImg.clone());
+
+        $ct.width($firstImg.width() * $ct.children().length)
+        $ct.css('left', '-520px')
+
+        $nextBtn.on('click', function () {
+            playNext(1)
+        })
+
+        $preBtn.on('click', function () {
+            playPre(1)
+        })
+
+        function playNext(n) {
+            if (isAnimate) return;
+            isAnimate = true
+            $ct.animate({
+                left: '-=' + n * $firstImg.width()
+            }, function () {
+                curPage += n
+                if (curPage === imgLength) {
+                    $ct.css('left', '-520px')
+                    curPage = 0
+                }
+                isAnimate = false;
+                setIndicator()
+            })
+        }
+
+        function playPre(n) {
+            if (isAnimate) return;
+            isAnimate = true
+            $ct.animate({
+                left: '+=' + n * $firstImg.width()
+            }, function () {
+                curPage -= n
+                if (curPage < 0) {
+                    $ct.css('left', -(imgLength * $firstImg.width()))
+                    curPage = imgLength - 1
+                }
+                isAnimate = false
+                setIndicator()
+            })
+        }
+
+        $indicator.on('click', 'li', function () {
+            var index = $(this).index();
+            console.log($(this).index())
+            if (index > curPage) {
+                playNext(index - curPage)
+            } else {
+                playPre(curPage - index)
+            }
+        })
+
+        function setIndicator() {
+            $indicator.children().removeClass('active').eq(curPage).addClass('active')
+        }
+
+
+
+
+        var $ct2 = $('.tmall-ct'),
+            $preBtn2 = $('.tmall-bd .btn-pre'),
+            $nextBtn2 = $('.tmall-bd .btn-next'),
+            $indicator2 = $('.tmall-bd .indicator');
+
+        var $lastImg2 = $ct2.find('li').last(),
+            $firstImg2 = $ct2.find('li').first();
+
+        var curPage2 = 0;
+        var imgLength2 = $ct2.children().length;
+        var isAnimate2 = false;
+
+        $ct2.prepend($lastImg2.clone());
+        $ct2.append($firstImg2.clone());
+
+        $ct2.width($firstImg2.width() * $ct2.children().length)
+        $ct2.css('left', '-520px')
+
+        $nextBtn2.on('click', function () {
+            playNext2(1)
+        })
+
+        $preBtn2.on('click', function () {
+            playPre2(1)
+        })
+
+        function playNext2(n) {
+            if (isAnimate2) return;
+            isAnimate2 = true
+            $ct2.animate({
+                left: '-=' + n * $firstImg2.width()
+            }, function () {
+                curPage2 += n
+                if (curPage2 === imgLength2) {
+                    $ct2.css('left', '-520px')
+                    curPage2 = 0
+                }
+                isAnimate2 = false;
+                setIndicator2()
+            })
+        }
+
+        function playPre2(n) {
+            if (isAnimate2) return;
+            isAnimate2 = true
+            $ct2.animate({
+                left: '+=' + n * $firstImg2.width()
+            }, function () {
+                curPage2 -= n
+                if (curPage2 < 0) {
+                    $ct2.css('left', -(imgLength2 * $firstImg2.width()))
+                    curPage2 = imgLength2 - 1
+                }
+                isAnimate2 = false
+                setIndicator()
+            })
+        }
+
+        $indicator2.on('click', 'li', function () {
+            var index2 = $(this).index();
+            console.log($(this).index())
+            if (index2 > curPage2) {
+                playNext2(index2 - curPage2)
+            } else {
+                playPre2(curPage2 - index2)
+            }
+        })
+
+        function setIndicator2() {
+            $indicator2.children().removeClass('active').eq(curPage).addClass('active')
+        }
+        </script>
+</body>
+
+</html>
