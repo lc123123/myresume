@@ -35,7 +35,7 @@
 
         @font-face {
             font-family: "iconfont";
-            src: url('./icon/iconfont.eot?t=1497776347815');
+            src: url('https://github.com/lc123123/myresume/tree/master/taobao/icon');
             /* IE9*/
             src: url('./icon/iconfont.eot?t=1497776347815#iefix') format('embedded-opentype'), /* IE6-IE8 */
             url('.icon/iconfont.woff?t=1497776347815') format('woff'), /* chrome, firefox */
