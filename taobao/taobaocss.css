@@ -1200,7 +1200,7 @@
         }
 
         .conve-icon {
-            background: url(https://lc123123.github.io/myresume/taobao/taobaoimg/sprit.png) 0 0 no-repeat;
+            background: url("https://lc123123.github.io/myresume/taobao/taobaoimg/sprit.png") 0 0 no-repeat;
         }
 
         .conve-item-1 .conve-icon {
