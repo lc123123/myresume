@@ -1,3 +1,39 @@
+/*搜索框tab */
+$('.serch-tab .tab2').on('click', function () {
+    var index = $(this).index();
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active')
+    $('.serch-tab input').css('border-color','#c60000')
+    $('.serch-button>button').css('background','#c60000')
+    $('.serch-panel>ul').removeClass('active')
+    $('.serch-panel>ul').eq(index).addClass('active')
+})
+
+$('.serch-tab .tab1').on('click', function () {
+    var index = $(this).index();
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active')
+    $('.serch-tab input').css('border-color','#ff4200')
+    $('.serch-button>button').css('background','#ff4200')
+    $('.serch-panel>ul').removeClass('active')
+    $('.serch-panel>ul').eq(index).addClass('active')
+})
+
+$('.serch-tab .tab3').on('click', function () {
+    var index = $(this).index();
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active')
+    $('.serch-tab input').css('border-color','#ff4200')
+    $('.serch-button>button').css('background','#ff4200')
+    $('.serch-panel>ul').removeClass('active')
+    $('.serch-panel>ul').eq(index).addClass('active')
+})
+
+/*qr-close*/
+
+$('.qr-close').on('click',function(){
+    $('.qr-r').css('display','none')
+})
 /*主题市场tab*/
 
 $('.service-bd>li').on('mouseover', function () {

@@ -280,10 +280,15 @@
             background: #F9E6E6;
         }
 
-        .serch-tab .active1 {
+        .tab1.active,.tab3.active {
             background: #FF4200!important;
             color: #fff;
             font-weight: 700;
+        }
+        .tab2.active{
+            background: #c60000!important;
+            color: #fff;
+            font-weight: 700
         }
 
         .serch-panel ul>li {
@@ -295,8 +300,12 @@
         }
 
         .serch-panel .tab-panel2,
-        .serch-panel .tab-panel3 {
+        .serch-panel .tab-panel3,
+        .serch-panel .tab-panel1 {
             display: none;
+        }
+        .serch-panel .active{
+            display: block;
         }
 
         .serch-wrap {
