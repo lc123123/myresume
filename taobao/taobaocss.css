@@ -72,13 +72,32 @@
             margin-top: -44px;
         }
 
+        .screen-outer {
+            width: 1190px;
+            margin: 0 auto;
+            height: 598px;
+            margin-top: 10px;
+        }
+
+        .screen-outer .main {
+            float: left;
+            width: 900px;
+            height: 100%;
+        }
+
+        .tbh-service {
+            float: left;
+            width: 190px;
+            margin-top: -44px;
+        }
+
         .screen-outer .service {
             height: 555px;
             position: relative;
             background: #FF6537;
             font-size: 14px;
             color: #fff;
-            width: 190px;
+            width: 190px; 
         }
 
         .service-hd {
@@ -148,7 +167,9 @@
             font-size: 12px;
             font-weight: 900;
         }
-
+        .service-bd .active{
+            background: #F94A14;
+        }
         .service-bd a:hover {
             color: #fff;
             text-decoration: underline;
