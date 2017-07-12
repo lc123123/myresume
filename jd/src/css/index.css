@@ -1,0 +1,522 @@
+.container {
+  width: 16rem;
+  height: 100vh;
+  font-family: STheiti;
+}
+.container > .cover {
+  position: fixed;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 13px;
+  font-weight: 100;
+  font-family: arial;
+}
+.container > .cover > span {
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background: #E36049;
+}
+.container .top {
+  position: fixed;
+  z-index: 100;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 0.3rem 0.4rem;
+  display: flex;
+  width: 16rem;
+  height: 1.9rem;
+}
+.container .top .bar {
+  width: 1.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  color: #fff;
+  justify-content: center;
+}
+.container .top .bar span {
+  font-size: .4rem;
+}
+.container .top i {
+  font-size: 0.85rem;
+}
+.container .top .icon-search {
+  position: absolute;
+  top: 0.5rem;
+  left: 2.4rem;
+  color: #ccc;
+}
+.container .top input {
+  margin: 0 0.25rem;
+  border-radius: 0.7rem;
+  border-style: none;
+  outline: none;
+  font-size: .525rem;
+  padding-left: 1.65rem;
+  flex: 1;
+  height: 1.4rem;
+}
+.container > header {
+  height: 7.15rem;
+}
+.container > header .carousel {
+  position: relative;
+  width: 16rem;
+  height: 7.15rem;
+  z-index: -1;
+}
+.container > header .carousel .pictures > img {
+  position: absolute;
+  width: 16rem;
+  height: 7.15rem;
+}
+.container > header .carousel .bars {
+  position: absolute;
+  bottom: 0.325rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.container > header .carousel .bars li {
+  width: .3rem;
+  height: .3rem;
+  border-radius: .15rem;
+  margin: .2rem;
+  border: 0.075rem solid white;
+}
+.container main {
+  background: #f3f3f3;
+  overflow: auto;
+}
+.container main .life ul {
+  padding: 0.4rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.container main .life ul li {
+  width: 2.05rem;
+  height: 2.4rem;
+  margin: 0 0.575rem 0.5rem 0.575rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.container main .life ul li img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.container main .life ul li span {
+  font-size: .5rem;
+}
+.container main .news {
+  height: 1.25rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin: 0 0.575rem 0.4rem 0.575rem;
+  padding: 0 0.45rem;
+}
+.container main .news .newspic {
+  height: 0.7rem;
+}
+.container main .news .newspic img {
+  height: 0.7rem;
+}
+.container main .news .scroll-news {
+  flex: 1;
+}
+.container main .news .scroll-news ul {
+  overflow: hidden;
+  margin-left: 0.3rem;
+  height: 1.25rem;
+}
+.container main .news .scroll-news ul li span.red {
+  font-size: 0.55rem;
+  font-weight: bold;
+  color: red;
+  padding: 0 0.3rem;
+}
+.container main .news .scroll-news ul li a {
+  line-height: 1.25rem;
+  padding-left: 0.2rem;
+}
+.container main .news a {
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  font-size: 0.55rem;
+}
+.container main .news a.more {
+  padding-left: 0.5rem;
+}
+.container main .seckill {
+  height: 6.7rem;
+  border-bottom: 2px solid #e2e2e2;
+  background: #fff;
+}
+.container main .seckill i {
+  font-size: 0.65rem;
+  line-height: 1.525rem;
+}
+.container main .seckill .wrap {
+  height: 1.525rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+}
+.container main .seckill .wrap .redclock {
+  color: red;
+}
+.container main .seckill .wrap .redclock span {
+  font-size: 0.65rem;
+  margin: 0 0.25rem;
+  line-height: 1.525rem;
+}
+.container main .seckill .wrap .part {
+  font-weight: bold;
+  line-height: 1.525rem;
+  font-size: 0.575rem;
+  margin: 0 0.25rem;
+}
+.container main .seckill .wrap .timeleft {
+  display: flex;
+  align-items: center;
+  font-size: 0.4rem;
+}
+.container main .seckill .wrap .timeleft span {
+  font-size: 0.4rem;
+  display: inline-block;
+  color: #fff;
+  background: #333;
+  padding: 0.1rem 0.15rem;
+  border-radius: 0.1rem;
+}
+.container main .seckill .wrap .timeleft strong {
+  margin: 0 0.1rem;
+}
+.container main .seckill .wrap .more {
+  flex: 1;
+  text-align: right;
+  color: red;
+  font-size: 0.65rem;
+}
+.container main .seckill .content > ul {
+  width: 16rem;
+  height: 5.175rem;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.container main .seckill .content > ul li {
+  display: inline-block;
+  width: 3.25rem;
+  text-align: center;
+  font-size: 0;
+}
+.container main .seckill .content > ul li img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.container main .seckill .content > ul li h2 {
+  margin: 0.375rem 0 0.15rem 0;
+  color: red;
+  font-size: 0.75rem;
+}
+.container main .seckill .content > ul li h2 span {
+  font-size: 0.5rem;
+}
+.container main .seckill .content > ul li h3 {
+  text-decoration: line-through;
+  font-size: 0.55rem;
+  color: #ccc;
+}
+.container main .seckill .content > ul li h3 span {
+  font-size: 0.45rem;
+}
+.container main .ads img {
+  width: 16rem;
+}
+.container main .standard {
+  display: flex;
+  flex-flow: row wrap;
+}
+.container main .standard .title {
+  text-align: center;
+  font-size: 0.75rem;
+  height: 1.7rem;
+  width: 16rem;
+  line-height: 1.7rem;
+  background: url(../imgs/tit1.png) no-repeat center center;
+  background-size: cover;
+}
+.container main .standard .half-goods {
+  display: flex;
+  flex-flow: row wrap;
+  background: #fff;
+}
+.container main .standard .half-goods .goods {
+  position: relative;
+  width: 8rem;
+  height: 5.15rem;
+  display: flex;
+}
+.container main .standard .half-goods .goods:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 8rem;
+  height: 1px;
+  background: #ccc;
+}
+.container main .standard .half-goods .goods:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 5.15rem;
+  background: #ccc;
+}
+.container main .standard .half-goods .goods .text {
+  width: 55.5%;
+  padding: 0.325rem 0 0 0.325rem;
+  font-size: 0;
+}
+.container main .standard .half-goods .goods .text strong {
+  font-size: 0.75rem;
+}
+.container main .standard .half-goods .goods .text p {
+  font-size: 0.6rem;
+  color: #686868;
+  margin: 0.2rem 0 0.1rem 0;
+}
+.container main .standard .half-goods .goods .text span {
+  font-size: 0.6rem;
+  padding: 0.05rem .1rem;
+  color: white;
+  background: #ff4a7d;
+}
+.container main .standard .half-goods .goods .pic {
+  padding: 0.325rem 0 0.3rem 0;
+  width: 44.5%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.container main .standard .half-goods .goods .pic img {
+  width: auto;
+  height: 100%;
+}
+.container main .standard .quarter-goods {
+  display: flex;
+  flex-flow: row nowrap;
+  background: white;
+}
+.container main .standard .quarter-goods .goods {
+  font-size: 0;
+  width: 4rem;
+  height: 5.15rem;
+  padding: 0.3rem;
+  position: relative;
+}
+.container main .standard .quarter-goods .goods:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 1px;
+  background: #ccc;
+}
+.container main .standard .quarter-goods .goods:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 5.15rem;
+  background: #ccc;
+}
+.container main .standard .quarter-goods .goods strong {
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+}
+.container main .standard .quarter-goods .goods p {
+  font-size: 0.55rem;
+  line-height: 0.6rem;
+  color: #686868;
+  margin: 0.2rem 0 0.1rem 0;
+}
+.container main .standard .quarter-goods .goods .pic {
+  overflow: hidden;
+}
+.container main .standard .quarter-goods .goods .pic img {
+  width: 100%;
+}
+.container main .standard .quarter-goods > .goods:last-child:after {
+  width: 0;
+}
+.container main .standard .half-goods > .goods:nth-child(even):after {
+  width: 0;
+}
+.container main .enjoybrand span {
+  background: #952dff !important;
+}
+.container main .ads-carousel {
+  width: 16rem;
+  height: 3.875rem;
+  margin-top: 0.5rem;
+}
+.container main .ads-carousel .ads-slide ul {
+  width: 100%;
+  height: 3.875rem;
+  overflow: hidden;
+}
+.container main .ads-carousel .ads-slide ul li {
+  width: 48rem;
+  font-size: 0;
+  margin-left: 0;
+}
+.container main .ads-carousel .ads-slide ul li img {
+  margin: 0 0.375rem;
+  width: 15.25rem;
+}
+.container .loadmore {
+  display: flex;
+  width: 16rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background: #f3f3f3;
+}
+.container .loadmore .line {
+  position: relative;
+  border-width: 0 0.3rem;
+  border-color: transparent;
+  border-style: solid;
+  width: 100%;
+  height: 1.5rem;
+  text-align: center;
+  font-size: 0.55rem;
+}
+.container .loadmore .line .icon-up {
+  color: #777;
+  font-size: 0.55rem;
+  line-height: 1.5rem;
+}
+.container .loadmore .line:before {
+  position: absolute;
+  content: '';
+  width: 35%;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  background: #aaa;
+}
+.container .loadmore .line:after {
+  position: absolute;
+  content: '';
+  width: 35%;
+  height: 1px;
+  right: 0;
+  top: 50%;
+  background: #aaa;
+}
+.container .loadmore .half {
+  width: 7.9rem;
+  height: 11rem;
+  margin-bottom: 0.15rem;
+  background: white;
+}
+.container .loadmore .half .pic {
+  height: 7.9rem;
+  background: white;
+}
+.container .loadmore .half .description {
+  padding: 0 0.25rem;
+  height: 1.75rem;
+  font-size: 0.55rem;
+  line-height: 0.825rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .loadmore .half .price-info {
+  padding: 0 0.25rem;
+  vertical-align: middle;
+  height: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: red;
+}
+.container .loadmore .half .price-info span {
+  font-size: 0.45rem;
+}
+.container .loadmore .half .price-info strong {
+  font-size: 0.55rem;
+}
+.container .loadmore .half .price-info a > button {
+  float: right;
+  border: 1px solid black;
+  border-radius: 0.25em;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  width: 2.175rem;
+  font-size: 0.5rem;
+}
+.container .fixedelements > a {
+  position: fixed;
+}
+.container .fixedelements .movie {
+  width: 3.2rem;
+  height: 3.2rem;
+  top: 50%;
+  right: -1.6rem;
+  background: url(../imgs/movie.jpg) no-repeat center center;
+  background-size: cover;
+  transition: .2s all ease;
+}
+.container .empty {
+  height: 2.2rem;
+}
+.container footer {
+  height: 2.15rem;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.container footer ul {
+  display: flex;
+  width: 16rem;
+  justify-content: space-around;
+}
+.container footer ul i {
+  font-size: 0.85rem;
+}
+.container footer ul li {
+  width: 1.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  color: #777;
+  justify-content: center;
+}
+.container footer ul li span {
+  font-size: .4rem;
+}
+.container footer ul li.active {
+  color: red;
+}
+
+/*# sourceMappingURL=index.css.map */
