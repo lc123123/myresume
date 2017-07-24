@@ -1,14 +1,20 @@
 <template>
-  <div id="app">
-    <Signin></Signin>
+  <div>
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
-import Signin from './components/SignIn'
+
 export default {
   name: 'app',
-  components:{ Signin }
+  data() {
+    return {
+      
+    }
+  },
+  components: {
+    
+  },
 }
 </script>
 
